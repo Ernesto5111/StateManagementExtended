@@ -1,52 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
-
+    tools:ignore="ExtraText">
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/main_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Licznik: 0"
-        android:textSize="24sp" />
+        android:layout_marginTop="20dp"
+        android:text="Wydarzenie w Sudetach"
+        android:textSize="35dp"
+        android:padding="10dp"
+        android:textStyle="bold"/>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/widok" />
+
+    <TextView
+        android:id="@+id/No_likes"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="+1"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:text="0 polubień"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/like"
+            android:text="POLUB"
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="18sp"
+            android:backgroundTint="#aaabfa"/>
+
+        <Button
+            android:id="@+id/delete"
+            android:text="USUŃ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="18sp"
+            android:backgroundTint="#aaabfa"/>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#808080"/>
 
     <EditText
-        android:id="@+id/input"
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Email"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        app:hintEnabled="false"
+        android:id="@+id/ETpass"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        android:id="@+id/ETrpass"/>
+    <Button
+        android:id="@+id/button_Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tekst"
-        />
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:text="Zapisz"/>
 
-    <CheckBox android:id="@+id/check"
+    <Button
+        android:id="@+id/button_SeeUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Checkbox" />
-
-    <TextView
-        android:id="@+id/inform"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Opcja zaznaczona"
-        android:visibility="gone"
-        android:textSize="18sp" />
-
-    <Switch
-        android:id="@+id/switcher"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tryb ciemny" />
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:text="Zobacz Uczestnika"/>
 
 </LinearLayout>
-
-
